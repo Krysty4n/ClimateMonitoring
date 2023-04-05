@@ -67,4 +67,6 @@ public class User {
         if(user.centroMonitoraggio.isBlank()){
             condition = true;
         }
+        return condition;
+   }
 }

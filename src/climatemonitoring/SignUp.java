@@ -4,6 +4,9 @@
  */
 package climatemonitoring;
 
+import static climatemonitoring.User.*;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author christianperri
@@ -217,7 +220,9 @@ public class SignUp extends javax.swing.JFrame {
                 userName.getText(),
                 String.valueOf(password.getPassword()),
                 centroMonitoraggio.getText());
-     
+        if(userEmpty(user)){
+            JOptionPane.showMessageDialog(null,"Compila tutti i campi");
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
