@@ -29,16 +29,6 @@ public class User {
        
     
 }
-   public static void saveUser(User user){
-       try{ 
-           BufferedWriter bw = new BufferedWriter(new FileWriter("../data/OperatoriRegistrati.dati.txt", true));
-           bw.write(user.userName + ":" + user.password+","+ user.nome+"," + user.cognome+","+ user.codiceFiscale+"," + user.email+";"+user.centroMonitoraggio +"\n");
-                   bw.close();
-       }catch(IOException e){
-           e.printStackTrace(); 
-       }
-       
-   }
    public static boolean userEmpty(User user){
        boolean condition = false; 
        if(user.nome.isBlank()){
@@ -68,5 +58,39 @@ public class User {
             condition = true;
         }
         return condition;
+   }
+   
+   public static boolean userContainSpace(User user){
+       return user.userName.contains(" ");
+      
+   }
+   public static boolean usernameCheck(User user){
+   String line; 
+   boolean condition = false; 
+   try{
+       BufferedReader br = new BufferedReader(new FileReader("../data/OperatoriRegistrati.dati.csv"));
+       while((line = br.readLine())!= null){
+           String[] sepLine = line.split(":");
+           if(sepLine[0].equals(user.userName)){
+               condition = true;
+               break; 
+               
+           }
+       }
+   }catch (IOException e){
+       e.printStackTrace();
+   }
+    return condition; 
+    
+   }
+   public static void saveUser(User user){
+       try{
+           BufferedWriter bw = new BufferedWriter(new FileWriter("../data/OperatoriRegistrati.dati.csv",true));
+           bw.write(user.userName + ":" + user.password + ":" + user.nome + "," + user.cognome+ "," + user.codiceFiscale+ "," + user.email+ "," + user.centroMonitoraggio + "\n");
+           bw.close();
+       }catch (IOException e){
+           e.printStackTrace();
+           
+       }
    }
 }
