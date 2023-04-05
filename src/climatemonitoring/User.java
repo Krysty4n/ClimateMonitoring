@@ -85,8 +85,11 @@ public class User {
    }
    public static void saveUser(User user){
        try{
-           BufferedWriter bw = new BufferedWriter(new FileWriter("../data/OperatoriRegistrati.dati.csv",true));
-           bw.write(user.userName + ":" + user.password + ":" + user.nome + "," + user.cognome+ "," + user.codiceFiscale+ "," + user.email+ "," + user.centroMonitoraggio + "\n");
+           BufferedWriter bw = new BufferedWriter(new FileWriter("../data/OperatoriRegistrati.dati.txt",true));
+           String str = user.userName + ":" + user.password + ":" + user.nome + "," + user.cognome+ "," + user.codiceFiscale+ "," + user.email+ "," + user.centroMonitoraggio + "\n";
+           bw.write(str);
+           bw.flush();
+         
            bw.close();
        }catch (IOException e){
            e.printStackTrace();
