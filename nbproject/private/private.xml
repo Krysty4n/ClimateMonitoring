@@ -3,10 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/christianperri/NetBeansProjects/ClimateMonitoring/src/climatemonitoring/SignUp.java</file>
-            <file>file:/Users/christianperri/NetBeansProjects/ClimateMonitoring/src/climatemonitoring/User.java</file>
-            <file>file:/Users/christianperri/NetBeansProjects/ClimateMonitoring/src/climatemonitoring/MainFrame.java</file>
-            <file>file:/Users/christianperri/NetBeansProjects/ClimateMonitoring/src/climatemonitoring/ClimateMonitoring.java</file>
+            <file>file:/Users/greta/Documents/GitHub/ClimateMonitoring/src/climatemonitoring/User.java</file>
+            <file>file:/Users/greta/Documents/GitHub/ClimateMonitoring/src/climatemonitoring/SignUp.java</file>
+            <file>file:/Users/greta/Documents/GitHub/ClimateMonitoring/src/climatemonitoring/RegistrazioneCentro.java</file>
+            <file>file:/Users/greta/Documents/GitHub/ClimateMonitoring/src/climatemonitoring/AreaGeografica.java</file>
         </group>
     </open-files>
 </project-private>
